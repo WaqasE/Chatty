@@ -1,0 +1,709 @@
+:root {
+    --primary: #F6F9FE;
+    --secondary: #FFFFFF;
+    --accent: #3275F7;
+    --accentDark:#2c67dd;
+    --dark: #21242B;
+    --txt: #636363;
+    --off: #f5f5f5;
+}
+
+/* --------------------------------------FormHeader ------------------------------------- */
+
+#formHeader {
+    width: 115px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+}
+
+
+#formLogo {
+    width: 40px;
+    height: 40px;
+}
+
+#formLogoText {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* --------------------------------------FormField ------------------------------------- */
+
+#formField {
+    height: 50px;
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    margin: 15px 0px;
+    box-sizing: border-box;
+}
+
+#formField input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: black;
+}
+
+#formField input:focus {
+    outline: none;
+}
+
+#formField:focus-within {
+    border: 1px solid var(--accent);
+}
+
+
+/* --------------------------------------FormExtra ------------------------------------- */
+
+#formExtra {
+    height: 20px;
+    width: 100%;
+    margin: 15px 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+}
+
+#formExtraCheckbox {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+#formExtraCheckbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+
+#checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    border: 1px solid #d1d1d1;
+}
+
+#formExtraCheckbox:hover input~#checkmark {
+    border: 1px solid var(--accent);
+}
+
+#formExtraCheckbox input:checked~#checkmark {
+    background-color: var(--accent);
+}
+
+#checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+#formExtraCheckbox input:checked~#checkmark:after {
+    display: block;
+}
+
+#formExtraCheckbox #checkmark:after {
+    left: 5px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#formExtra p {
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--accent);
+}
+
+#formExtra p:hover {
+    text-decoration: underline;
+}
+
+#formExtraCheckbox span{
+    cursor: pointer;
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+#formExtra p:span {
+    color: var(--accentDark);
+}
+
+
+/* --------------------------------------FormSubmit------------------------------------- */
+
+#formSubmit {
+    height: 50px;
+    width: 100%;
+    margin: 15px 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    background: var(--accent);
+    cursor: pointer;
+  
+}
+
+#formSubmit:hover{
+    background: var(--accentDark);
+}
+
+/* --------------------------------------FormSwitch------------------------------------- */
+
+#formSwitch{
+    font-size: 13px;
+    align-self: center;
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+}
+
+#formSwitch span{
+    margin-left: 5px;
+    color: var(--accent);
+    cursor: pointer;
+    font-size: 13px;
+
+}
+
+/* --------------------------------------MainSidebar------------------------------------- */
+#mainSidebar{
+    width: 70px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 30px 0px;
+    background: var(--secondary);
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+#mainLogo{
+    width: 40px;
+    height: 40px;
+}
+
+#mainPrimaryButtonsWrapper{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--secondary);
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+#mainSecondaryButtonsWrapper{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--secondary);
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+/* --------------------------------------MainButton------------------------------------- */
+#mainButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#mainButton:hover{
+    background: rgba(0,0,0,0.1);
+}
+
+#mainButtonImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#mainButtonDot{
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background: var(--accent);
+    position: relative;
+    right: 5px;
+    top:-10px;
+}
+
+#mainButtonImgDot{
+    width: 7px;
+    height: 7px;
+    border-radius: 3.5px;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 30px;
+
+}
+
+/* --------------------------------------Chat------------------------------------- */
+#chat{
+    width: calc(100vw - 70px);
+    height: 100%;
+    display: flex;
+    background: var(--secondary);
+    box-sizing: border-box;
+}
+
+#chatSidebar{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    background: var(--off);
+    box-sizing: border-box;
+    align-items: center;
+    border-right: 0.1px solid #d1d1d1;
+}
+
+#chatSidebarHeader{
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 15px;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+#chatSidebarMainHeader{
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+}
+
+#chatSidebarHeader p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#chatSidebarSearchWrapper {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    margin: 15px 0px;
+    box-sizing: border-box;
+    background: var(--secondary);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+#chatSidebarSearchWrapper input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: black;
+}
+
+#chatSidebarSearchWrapper input:focus {
+    outline: none;
+}
+
+#chatSidebarSearchWrapper:focus-within {
+    border: 1px solid var(--accent);
+}
+
+#chatSidebarSearchIcon {
+    position: relative;
+    right:20px;
+}
+
+#chatDiv{
+    width: 100%;
+    height: 70px;
+    background: var(--off);
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+    position: relative;
+    cursor: pointer;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#chatDivHover{
+    position: absolute;
+    background: none;
+    width: 100%;
+    height: 100%;
+}
+#chatDivHover:hover{
+    background: rgba(0,0,0,0.1);
+}
+
+
+#chatIcon{
+    width: 40px;
+    height:40px;
+    border-radius: 20px;
+    background: var(--secondary);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#chatIconText{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: grey;
+    font-weight: bold;
+}
+
+#chatIconImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#chatIconDot{
+    width: 7px;
+    height: 7px;
+    border-radius: 3.5px;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+#chatDivDetailsWrapper{
+    width:100%;
+    height: 100%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    background: var(--off);
+}
+
+#chatDivDetails{
+    width:70%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 40px;
+    background: var(--off);
+}
+
+#chatDivTime{
+    width:30%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    box-sizing: border-box;
+    background: var(--off);
+
+}
+
+#chatDivHeading{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--txt);
+
+}
+
+#chatDivText{
+    font-size: 13px;
+    color: var(--txt);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100px;
+}
+
+#chatDivTimeText{
+    font-size: 12px;
+    color: grey;
+}
+
+#chatInbox{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#chatInbox::-webkit-scrollbar {
+    width: 5px;
+
+  }
+  
+  /* Track */
+  #chatInbox::-webkit-scrollbar-track {
+    background: var(--primary); 
+  }
+   
+  /* Handle */
+  #chatInbox::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3); 
+  }
+  
+  /* Handle on hover */
+  #chatInbox::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.4); 
+  }
+
+/* --------------------------------------Messaging------------------------------------- */
+
+  #messaging{
+      width: 75%;
+      height: 100%;
+      background: var(--secondary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+  }
+
+  #messagingEmpty{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+  }
+
+
+#messagingEmptyHeading{
+    color: var(--txt);
+}
+
+#messagingEmptyDetail{
+    color: rgba(0,0,0,0.3);
+    width: 350px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* --------------------------------------Chatting------------------------------------- */
+
+#Chatting{
+    width: 70%;
+    height: 100%;
+    background: var(--secondary);
+}
+
+#ChattingHeader{
+    width: 100%;
+    height: 80px;
+    background: var(--off);
+    border-bottom: 0.1px solid #d1d1d1;
+    padding: 0px 30px ;
+    padding-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+
+#ChattingHeaderDetailsWrapper{
+    width:100%;
+    height: 100%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+#ChattingHeaderDetails{
+    width:70%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 40px;
+    background: var(--off);
+}
+
+
+#ChattingHeaderHeading{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--txt);
+
+}
+
+#ChattingHeaderText{
+    font-size: 13px;
+    color: var(--txt);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100px;
+}
+
+
+/* --------------------------------------ChatProfile------------------------------------- */
+
+#chatProfile{
+    width: 30%;
+    height: 100%;
+    background: var(--off);
+    border-left: 0.1px solid #d1d1d1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    justify-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#card{
+    width: 100%;
+    border-radius: 3px;
+    background: var(--secondary);
+    min-height: 50px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: fit-content;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#card:hover{
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1);
+}
+
+#chatProfileImgWrapper{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    background: var(--off);
+}
+
+#chatProfileImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+
+
+#chatProfileDetails{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 20px 0px;
+}
+
+
+#chatProfileHeading{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--txt);
+    width: 100%;
+    text-align: center;
+  
+
+}
+
+#chatProfileText{
+    font-size: 13px;
+    color: var(--txt);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+#chatProfileImagesAndLinks{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0px 15px;
+}
+
+#chatProfileImagesAndLinksHeading{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--txt);
+    width: 100%;
+}
+
+
+
